@@ -35,19 +35,12 @@ function upperCaseFirstLetters(array) {
 
 function changeToInitials(array) {
   initials = [];
-  for(i = 0; i < array.length; i++) {
-    initials.push(array[i][0].toUpperCase() + array[i].indexOf(' ').toUpperCase);
+  for(let i = 0; i < array.length; i++) {
+    let secondInitial = 1 + array[i].indexOf(' ');
+    initials.push(array[i][0] + array[i][secondInitial]);
   }
   return initials;
 }
-
-a = changeToInitials(['Colin Jaffe', 'Mesuara Kaleziq'])
-b = changeToInitials(['Larry Bird', 'Robert Parrish']) 
-a;
-b;
-
-
-
 
 function doubleOdd(array) {
   doubleOdd = [];
